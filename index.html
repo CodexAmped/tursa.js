@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="tursa.js"></script>
+</head>
+<body>
+    <h3>Navigation Links</h3>
+    <div>
+        <a href="index.html#/home">Home</a>&nbsp;
+        <a href="index.html#/contact">Contact</a>&nbsp;
+        <a href="index.html#/about">About</a>&nbsp;
+    </div>
+    <br />
+    <br />
+
+    <h3>Views</h3>
+    <div o-view></div>
+
+    <script>
+        Orka.AddRoute(HomeController, 'home', 'Views/home.html');
+        Orka.AddRoute(ContactController, 'contact', 'Views/contact.html');
+        Orka.AddRoute(AboutController, 'about', 'Views/about.html');
+        Orka.init();
+
+        function HomeController(model) {
+            model.Message = 'Hello World';
+        }
+        function ContactController(model) {
+            model.FirstName = 'John';
+            model.LastName = 'Doe';
+            model.Phone = '098-384-123';
+        }
+        function AboutController(model) {
+            model.text = 'About Link';
+            model.link = 'http://google.com';
+        }
+    </script>
+</body>
+</html>
