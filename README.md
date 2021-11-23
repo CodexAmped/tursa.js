@@ -1,6 +1,6 @@
 ## Intro
 
-This is a simple and small javascript MVC framework for building interfaces.
+This is a simple and small javascript MVC framework built from scratch for building interfaces.
 
 ## Installation
 
